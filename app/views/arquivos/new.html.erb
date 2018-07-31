@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<h3>Importar Arquivo CSV</h3>
+<%= form_tag import_arquivos_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Importar" %>
+<% end %>
