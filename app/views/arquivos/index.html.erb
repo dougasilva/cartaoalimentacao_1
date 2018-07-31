@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dados Importados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Token</th>
+      <th>Data Admissão</th>
+      <th>Saldo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arquivos.each do |arquivo| %>
+      <tr>
+        <td><%= "#{ arquivo.name } #{ arquivo.surname }" %></td>
+        <td><%= arquivo.token %></td>
+        <td><%= arquivo.email %></td>
+        <td><%= arquivo.admission_date %></td>
+        <td><%= arquivo.available_amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Arquivo', new_arquivo_path %>
