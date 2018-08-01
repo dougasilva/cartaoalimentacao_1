@@ -17,10 +17,10 @@
     <% @arquivos.each do |arquivo| %>
       <tr>
         <td><%= "#{ arquivo.name } #{ arquivo.surname }" %></td>
-        <td><%= arquivo.token %></td>
         <td><%= arquivo.email %></td>
-        <td><%= arquivo.admission_date %></td>
-        <td><%= arquivo.available_amount %></td>
+        <td><%= arquivo.token %></td>
+        <td><%= arquivo.admission_date.strftime('%d/%m/%Y') %></td>
+        <td><%= number_to_currency(arquivo.available_amount, locale: :"pt-BR") %></td>
       </tr>
     <% end %>
   </tbody>

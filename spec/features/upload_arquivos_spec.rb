@@ -10,10 +10,11 @@ RSpec.feature 'UploadArquivos', type: :feature do
     expect(page).to have_content 'Dados Importados' 
   end
 
-  scenario 'Nã faz upload de arquivo inválido' do
+  scenario 'Não permite importar sem arquivo selecionado' do
     visit new_arquivo_path
     click_on('Importar')
 
     expect(page).to have_content 'Selecione um arquivo' 
   end
+
 end
