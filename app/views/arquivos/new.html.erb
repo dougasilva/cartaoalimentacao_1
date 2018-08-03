@@ -1,6 +1,27 @@
-<p id="notice"><%= notice %></p>
-<h3>Importar Arquivo CSV</h3>
-<%= form_tag import_arquivos_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Importar" %>
-<% end %>
+<div class="container-fluid">
+  <% if notice %>
+    <div class="alert alert-warning" role="alert">
+      <p id="notice"><%= notice %></p>
+    </div>
+  <% end %>  
+    
+  <div class="col align-self-center">
+    <div class="row justify-content-center">
+      <div class="col-4">
+          <h3>Importar Arquivo CSV</h3>
+           <%= form_tag import_arquivos_path, multipart: true do %>
+            <%= file_field_tag :file %>
+            <br/>
+            <br/>
+            <%= submit_tag 'Importar', class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+    
+</div>
+
+
+
+
+

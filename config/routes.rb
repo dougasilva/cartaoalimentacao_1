@@ -4,5 +4,5 @@ Rails.application.routes.draw do
       post :import
     end
   end
-  root 'arquivos#index'
+  root 'arquivos#new'
 end
